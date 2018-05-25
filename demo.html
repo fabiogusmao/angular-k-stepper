@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body ng-app="demo">
+    <form name="frm" class="container">
+        <h1>angular k-stepper</h1>
+        
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <div class="form-group">
+                    <label>Enter a number between -10 and 10</label>
+                    <div class="input-group">
+                        <input type="text" name="numField" type="text" ng-model="kNum" min="-10" max="10" class="form-control">
+                        <span class="input-group-addon">
+                            <span k-stepper value="kNum"  min="-10" max="10" step="1"></span>
+                        </span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>        
+    </form>
+    <script>
+        angular.module('demo', ['k-stepper']);
+    </script>
+</body>
+
+</html>
