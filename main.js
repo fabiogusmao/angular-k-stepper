@@ -15,7 +15,7 @@
                 value: '='
             }, link: function (scope, element, attrs, ngModel) {
                 scope.stepUp = function(){
-                    var value = scope.value;
+                    var value = Number(scope.value);
                     if(isNaN(value))
                         value = 0;
                     value+=scope.step;
@@ -27,7 +27,7 @@
                     scope.value = value;
                 }
                 scope.stepDown = function(){
-                    var value = scope.value;
+                    var value = Number(scope.value);
                     if(isNaN(value)){
                         value = 0;
                     } else {
