@@ -1,19 +1,25 @@
 .k-stepper {
     display: inline-block;
-    margin-top: -10px;
-    margin-bottom: -10px;
+    margin-top: -15px;
+    margin-bottom: -15px;
 }
 
 .k-stepper > button {
     display: block;
     border-radius: 50%;
     font-size: 35%;
-    height: 15px;
-    width: 15px;
+    height: 25px;
+    width: 25px;
     padding: 0;
 
     border: 2px solid white;
 }
+
+.k-stepper > button[disabled=disabled] {
+    background-color: #ccc;
+    color: #444;
+}
+
 .k-stepper > .k-stepper-up {
     background-color: #5555ff;
     color: #ffffff;
