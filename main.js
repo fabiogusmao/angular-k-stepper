@@ -8,13 +8,15 @@
                 value: '=value',
                 min: '=min',
                 max: '=max',
-                disabled: '=disabled'
+                disabled: '=disabled',
+                change: '&change'
             }, bindings: {
                 step: '<',
                 min: '<',
                 max: '<',
                 value: '=',
-                disabled: '='
+                disabled: '=',
+                change: '&'
             }, link: function (scope, element, attrs, ngModel) {
                 scope.stepUp = function(){
                     var value = Number(scope.value);
@@ -27,6 +29,10 @@
                     }
 
                     scope.value = value;
+
+                    if(scope.change){
+                        scope.change();
+                    }
                 }
                 scope.stepDown = function(){
                     var value = Number(scope.value);
@@ -40,6 +46,10 @@
                     }
 
                     scope.value = value;
+                    
+                    if(scope.change){
+                        scope.change();
+                    }
 
                 }
             }

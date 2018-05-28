@@ -19,7 +19,7 @@
                     <div class="input-group">
                         <input type="text" name="numField" type="text" ng-model="kNum" min="-10" max="10" class="form-control">
                         <span class="input-group-addon">
-                            <span k-stepper value="kNum" min="-10" max="10" step="1" disabled="stepperDisabled"></span>
+                            <span k-stepper value="kNum" change="hasChanged = true" min="-10" max="10" step="1" disabled="stepperDisabled"></span>
                         </span>
                     </div>
 
@@ -37,9 +37,14 @@
                 </div>
             </div>
         </div>
+{{hasChanged}}
+        <div class="alert alert-success" ng-if="hasChanged">
+            <i class="fa fa-check"></i>
+            Stepper has been clicked!
+        </div>
     </form>
     <script>
-        angular.module('demo', ['k-stepper']);
+        angular.module('demo', ['k-stepper']);        
     </script>
 </body>
 
