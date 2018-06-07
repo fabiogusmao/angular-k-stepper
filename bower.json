@@ -5,7 +5,7 @@
     "Fábio Gusmão <fabio.gusmao@qx3.com.br>"
   ],
   "description": "",
-  "main": ["main.js", "main.css"],
+  "main": ["dist/main.js", "dist/main.css"],
   "license": "MIT",
   "ignore": [
     "**/.*",
