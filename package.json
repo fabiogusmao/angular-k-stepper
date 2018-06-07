@@ -1,0 +1,15 @@
+{
+  "name": "angular-k-stepper",
+  "version": "1.0.0",
+  "description": "Stepper directive for angularjs",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-ng-annotate": "^2.1.0"
+  }
+}
