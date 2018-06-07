@@ -1,5 +1,6 @@
 (function (angular) {
-    angular.module('k-stepper', []).directive('kStepper', ["$timeout", function ($timeout) {
+   var app =  angular.module('k-stepper', []);
+   app.directive('kStepper', ["$timeout", function ($timeout) {
         return {
             //require: 'ngModel',
             template: '<span class="k-stepper"><button ng-disabled="disabled" ng-click="stepUp()" type="button" class="k-stepper-up"><span class="fa fa-plus"></span></button><button ng-disabled="disabled" ng-click="stepDown()" type="button" class="k-stepper-down"><span class="fa fa-minus"></span></button></span>',
